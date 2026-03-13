@@ -32,7 +32,7 @@ Service: LoadBalancer tipi kullanılarak uygulama dış dünyaya (Port 80) açı
 
 Kurulum ve Çalıştırma
 Docker ile Çalıştırma
-Bash
+
 # İmajı build et
 docker build -t batudemx/b4cm-api:latest .
 
@@ -48,7 +48,10 @@ kubectl get pods
 kubectl get service bc4m-api-service
 
 Geliştirme ekran görüntülüleri :
+
+
 <img width="706" height="183" alt="Ekran görüntüsü 2026-03-13 141555" src="https://github.com/user-attachments/assets/583fa06f-1f9a-4bf9-b57b-91445aec8903" />
+
 <img width="1814" height="768" alt="Ekran görüntüsü 2026-03-13 141530" src="https://github.com/user-attachments/assets/5e564333-e9f2-47f2-ab9c-c2481ff14b49" />
 
 

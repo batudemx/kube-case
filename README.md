@@ -1,5 +1,5 @@
 .NET API Deployment on Kubernetes
-Bu proje, bir .NET 9.0 uygulamasının konteynerize edilmesi ve Kubernetes (K8s) üzerinde yüksek erişilebilirlik (HA) ve kendi kendini iyileştirme (self-healing) özellikleriyle canlıya alınmasını içeren bir Case Study çalışmasıdır.
+Bu proje, bir .NET 9.0 uygulamasının konteynerize edilmesi ve Kubernetes (K8s) üzerinde yüksek erişilebilirlik  ve kendi kendini iyileştirme (self-healing) özellikleriyle canlıya alınmasını içeren bir Case Study çalışmasıdır.
 
 Kullanılan Teknolojiler
 Backend: .NET 9.0 Minimal API

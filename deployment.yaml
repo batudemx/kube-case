@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: b4cm-api-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: b4cm-api
+  template:
+    metadata:
+      labels:
+        app: b4cm-api
+    spec:
+      containers:
+        - name: b4cm-api
+          image: batudemx/b4cm-api:latest
+          ports:
+            - containerPort: 5000
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 5000
+            initialDelaySeconds: 20
+            periodSeconds: 10
+            failureThreshold: 3
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: b4cm-api-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: b4cm-api
+  ports:
+    - protocol: TCP
+      port: 80 #dış dünyadan container'a erişmek için port alttaki port container içindeki 5000 portuna yömlendirir !!
+      targetPort: 5000
